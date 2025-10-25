@@ -1,0 +1,9 @@
+#!/bin/bash
+_dir="${CHECK_PATH}"
+
+if [ -z "${_dir}" ]; then
+    echo "unknown path" >&2
+else
+    find "${_dir}"
+fi
+

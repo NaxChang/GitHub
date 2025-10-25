@@ -1,0 +1,7 @@
+services:
+  envtest:
+    build:
+      context: .
+    environment:
+        THEENV: ${THEENV}
+

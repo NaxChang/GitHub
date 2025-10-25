@@ -1,0 +1,10 @@
+
+#!/bin/bash
+
+_dir="${CHECK_PATH}"
+
+if [ "${_dir}" == "" ]; then
+    echo UNKNOWN PATH! >&2
+else
+    find "${_dir}"
+fi
