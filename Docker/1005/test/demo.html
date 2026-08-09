@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background: #f0f0f0;
+        }
+        .box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: auto;
+        }
+        pre {
+            background: #222;
+            color: #eee;
+            padding: 10px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Docker Demo</h1>
+
+    <p>這是一個簡單的 Docker HTML 範例頁面。</p>
+
+    <h2>Dockerfile</h2>
+    <pre>
+FROM nginx:latest
+COPY ./demo.html /usr/share/nginx/html/index.html
+    </pre>
+
+    <h2>啟動方式</h2>
+    <pre>
+docker build -t demo .
+docker run -d -p 8080:80 demo
+    </pre>
+
+    <p>打開瀏覽器： <b>http://localhost:8080</b></p>
+</div>
+
+</body>
+</html>
